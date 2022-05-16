@@ -10,16 +10,19 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 function generatePassword() {
   var lowerChars = "abcdefghijklmnopqrstuvwxyz"
   var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   var numbers = "123456789"
+  var special = "~!@#$%&*_-+"
+
+  // Check if password length is between 8 and 128 characters
+
   var passwordLength = prompt ("What is the length of the password?")
   console.log (passwordLength)
-  // Check if password length is between 8 and 128 characters
+
   if (passwordLength < 8) {
     alert ("Password too short")
     return "Password too short"
@@ -30,6 +33,7 @@ function generatePassword() {
     return "Password too long"
   }
   // Ask user what kind of characters they want (lowercase, uppercase, numeric, special)
+
   var hasLower = confirm ("Do you want lowercase characters?")
 
   console.log (hasLower)
@@ -51,14 +55,24 @@ function generatePassword() {
   console.log (hasNumbers)
   var numbers = ""
   if (hasNumbers) {
-    numbers
+    chosenCharacters = chosenCharacters + numbers
   }
 
-  console.log (hasNumbers)
+  var hasSpecial = confirm ("Do you want special characters?")
+
+  console.log (hasSpecial)
+  var numbers = ""
+  if (hasSpecial) {
+    chosenCharacters = chosenCharacters + special
+  }
+  
  // There should be at least one character type selected
-  var password = chosenCharacters
+
+  var password = numbers
+
   // Create random password using aforementioned criteria
-  return password
+
+  return numbers
 }
 
 // Add event listener to generate button
