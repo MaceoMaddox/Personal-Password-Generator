@@ -68,11 +68,11 @@ function generatePassword() {
   
  // There should be at least one character type selected
 
-  var password = numbers
+  var password = chosenCharacters
 
   // Create random password using aforementioned criteria
 
-  return numbers
+  return password
 }
 
 // Add event listener to generate button
