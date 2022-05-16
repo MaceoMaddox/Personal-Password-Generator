@@ -16,6 +16,7 @@ function writePassword() {
 function generatePassword() {
   var lowerChars = "abcdefghijklmnopqrstuvwxyz"
   var upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  var numbers = "123456789"
   var passwordLength = prompt ("What is the length of the password?")
   console.log (passwordLength)
   // Check if password length is between 8 and 128 characters
@@ -34,17 +35,28 @@ function generatePassword() {
   console.log (hasLower)
   var chosenCharacters = ""
   if (hasLower) {
-  chosenCharacters = chosenCharacters + lowerChars
+    chosenCharacters = chosenCharacters + lowerChars
   }
   
   var hasUpper = confirm ("Do you want uppercase characters?")
 
   console.log (hasUpper)
+  var chosenCharacters = ""
   if (hasUpper) {
     chosenCharacters = chosenCharacters + upperChars
-    }
-  // There should be at least one character type selected
-  var password = "example"
+  }
+  
+  var hasNumbers = confirm ("Do you want numbers?")
+
+  console.log (hasNumbers)
+  var numbers = ""
+  if (hasNumbers) {
+    numbers
+  }
+
+  console.log (hasNumbers)
+ // There should be at least one character type selected
+  var password = chosenCharacters
   // Create random password using aforementioned criteria
   return password
 }
