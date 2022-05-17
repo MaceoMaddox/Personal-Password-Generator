@@ -72,7 +72,7 @@ function generatePassword() {
 
   // Create random password using aforementioned criteria
 
-  return password
+  random = password
 }
 
 // Add event listener to generate button
